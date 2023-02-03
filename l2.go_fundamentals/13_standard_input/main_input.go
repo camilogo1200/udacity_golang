@@ -8,11 +8,11 @@ import (
 )
 
 func main() {
-	//readSingleCharacter()
-	//readSingleLine()
-	//readMultipleLines()
-	//readFormattedUserInput()
-	//readNumbers()
+	readSingleCharacter()
+	readSingleLine()
+	readMultipleLines()
+	readFormattedUserInput()
+	readNumbers()
 }
 
 func readSingleCharacter() {
