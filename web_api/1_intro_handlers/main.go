@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"net/http"
+	"strconv"
 	"time"
 )
 
@@ -15,6 +16,8 @@ const LISTEN_PORT = 3500
 func main() {
 	http.HandleFunc("/", index)
 	fmt.Println("starting server...")
-	fmt.printf("Listening on Port => ")
-	http.ListenAndServe(":", nil)
+	fmt.Printf("Listening on Port => %v\n", LISTEN_PORT)
+	serverString := ":" + strconv.Itoa(LISTEN_PORT)
+	http.ListenAndServe(serverString, nil)
+
 }
