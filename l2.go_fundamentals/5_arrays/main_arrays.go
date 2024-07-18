@@ -8,7 +8,7 @@ func main() {
 
 	// declaring array
 	var vegetables [2]string
-	cars := [4]string{"Mazda", "Mercedez", "BMW", "Ford"}
+	cars := [4]string{"Mazda", "Mercedes", "BMW", "Ford"}
 
 	vegetables[0] = "Onion"
 	vegetables[1] = "Carrot"

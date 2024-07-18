@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"strings"
 )
 
 func main() {
@@ -66,45 +67,41 @@ func readSingleLine() {
 func readMultipleLines() {
 
 	fmt.Println("input text:")
-	/*
-		//Fmt.Scan
-		var w1, w2, w3 string
-		n, err := fmt.Scan(&w1, &w2, &w3)
-		if err != nil {
-			log.Fatal(err)
+	lines := readMultilinesReader()
+	readMultilinesScanner(lines)
+}
+
+func readMultilinesReader() []string {
+	//bufio.Reader multiline
+
+	reader := bufio.NewReader(os.Stdin)
+
+	var lines []string
+
+	for {
+		line, errReader := reader.ReadString('\n')
+		if errReader != nil {
+			log.Fatal(errReader)
 		}
 
-		fmt.Printf("number of items read: %d\n", n)
-		fmt.Printf("read text: %s %s %s-\n", w1, w2, w3)
-	*/
-
-	/*
-		//bufio.Reader multiline
-
-		reader := bufio.NewReader(os.Stdin)
-
-		var lines []string
-
-		for {
-			line, errReader := reader.ReadString('\n')
-			if errReader != nil {
-				log.Fatal(errReader)
-			}
-
-			if len(strings.TrimSpace(line)) == 0 {
-				break
-			}
-			lines = append(lines, line)
-			fmt.Printf("line read : %s", line)
+		if len(strings.TrimSpace(line)) == 0 {
+			break
 		}
+		lines = append(lines, line)
+		fmt.Printf("line read : %s", line)
+	}
 
-		fmt.Printf("total lines => %d\n", len(lines))
-		fmt.Println("read lines-> \n", lines)
-	*/
+	fmt.Printf("total lines => %d\n", len(lines))
+	fmt.Println("read lines-> \n", lines)
+	return lines
+}
+
+func readMultilinesScanner(lines []string) {
 	//bufio.scanner
 
+	var scannedLines []string
 	scanner := bufio.NewScanner(os.Stdin)
-	var lines []string
+
 	for {
 		scanner.Scan()
 		err := scanner.Err()
@@ -117,7 +114,7 @@ func readMultipleLines() {
 		if len(line) == 0 {
 			break
 		}
-		lines = append(lines, line)
+		scannedLines = append(scannedLines, line)
 	}
 
 	fmt.Printf("total lines => %d\n", len(lines))

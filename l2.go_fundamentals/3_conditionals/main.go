@@ -6,20 +6,21 @@ import (
 )
 
 func main() {
-	languague := "Go"
+	language := "Go"
 
-	if languague == "Java" {
+	if language == "Java" {
 		fmt.Printf("Language is \"Java\"")
-	} else if languague == "Rust" {
+	} else if language == "Rust" {
 		fmt.Println("Language is \"Rust\"")
-	} else if languague == "C++" {
+	} else if language == "C++" {
 		fmt.Println("Language is \"C++\"")
 	} else {
 		fmt.Println("Language is not Java, Rust or C++")
 	}
 
 	fmt.Print("Go runs on ")
-	switch os := runtime.GOOS; os {
+	os := runtime.GOOS
+	switch os {
 	case "darwin":
 		fmt.Println("OS X.")
 	case "Linux":

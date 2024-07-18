@@ -1,13 +1,13 @@
 # Conditionals
 
 ```go
-// DESICION TREE IN GO
+// DECISION TREE IN GO
 if CONDITION {
     //runs if the CONDITION is true
 } else if ANOTHER_CONDITION {
     //code runs if  ANOTHER_CONDITION is true
 } else{
-    //code runs in all other cases if there's not a condition match
+    //code runs in all other cases if there's not a condition to match
 }
 
 ```
@@ -34,13 +34,13 @@ fun main(){
 ## Comparison Operators
 
 | Symbol | Meaning          |
-| ------ | ---------------- |
+|--------| ---------------- |
 | ==     | equal            |
 | !=     | not equal        |
 | <      | less             |
 | <=     | less or equal    |
-| >      | greater          |
-| >=     | greater or equal |
+| `>`    | greater          |
+| `>=`    | greater or equal |
 
 ## Logical Operators
 

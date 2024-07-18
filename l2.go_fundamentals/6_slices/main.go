@@ -2,6 +2,37 @@ package main
 
 import "fmt"
 
+/*
+	Slice types
+		-> A slice is a descriptor for a contiguous segment of an underlying array and provides access
+			to a numbered sequence of elements from that array.
+			A slice type denotes the set of all slices of arrays of its element type.
+		-> The number of elements is called the length og the slice and is never negative.
+		-> The value of an uninitialized slice is "nil"
+
+		SliceType = [] ElementType
+
+		-> The length of a slice can be discovered by the built-in function "len", this can be changed during execution
+		-> The elements can be addressed by integer indices 0 through len(s) -1.
+		-> The slice index may be less than the index of the same element in the underlying array.
+		-> A slice once initialized, is always associated with an underlying array, that holds its elements.
+			A slice therefore,  shares storage with its array and with other slices of the same array.
+			by contrast distinct arrays always represent distinct storage
+		-> The array underlying the slice may extend past the end of the slice.
+		-> The capacity is a measure of that extent: is the sum of the length of the slice and the length of the array
+			beyond the slice.
+		-> The capacity of a slice can be discovered using the built-in function "cap"
+		-> A new, initialized slice value for a given element type T may be made using the built-in function "make"
+			which takes a slice type, and parameters specifying the length and optionally the capacity.
+		-> A slice allocated with "make" always allocates a new, hidden array to which the returned slice value refers.
+		-> executing :
+			make ( []T , length, capacity )
+
+		-> slices are always one-dimensional but may be composed to create a higher-dimensional objects.
+			** with slice of slices ( or array of slices ), the inner lengths may vary dynamically,
+				Moreover, the inner Slices MUST BE initialized individually
+*/
+
 func main() {
 
 	animals := []string{"Bear", "Dog", "Cat", "Bird"}
