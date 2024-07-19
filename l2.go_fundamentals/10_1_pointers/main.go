@@ -72,7 +72,7 @@ func main() {
 	fmt.Println(testPtr)
 	//emails does not change... the struct passed to the function is by value
 	//we will need to use the pointer to update the memory of the struct on email field
-	testPtr.UpdateEmail("MyNewEmail@newEmail.com")
+	testPtr.UpdateEmail("hello@newEmail.com")
 	fmt.Println(testPtr)
 	testPtr.UpdateEmailPtr("MyNewEmail@mewEmail.com")
 	fmt.Println(testPtr)

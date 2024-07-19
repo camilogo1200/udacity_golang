@@ -32,4 +32,14 @@ func main() {
 		fmt.Println("index => " + strconv.Itoa(i) + str)
 	}
 
+	i := 0
+
+	for {
+		if i == 10 {
+			break
+		}
+		fmt.Printf("i = %d", i)
+		i++
+	}
+
 }
