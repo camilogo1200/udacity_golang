@@ -11,24 +11,35 @@ import (
 func main() {
 	readSingleCharacter()
 	readSingleLine()
+	readSingleLine2()
 	readMultipleLines()
 	readFormattedUserInput()
 	readNumbers()
 }
 
+func readSingleLine2() {
+
+	fmt.Println("Enter your name ")
+	var name string
+	_, err := fmt.Scanln(&name)
+	if err != nil {
+		return
+	}
+	fmt.Printf("Your name is: %s\n", name)
+}
+
 func readSingleCharacter() {
 	fmt.Println("Input text:")
-	/*
-		//bufio.reader
-		reader := bufio.NewReader(os.Stdin)
-		char, size, err := reader.ReadRune()
-		if err != nil {
-			log.Fatal(err)
-		}
-	*/
 
-	var char rune
-	n, err := fmt.Scanf("%c", &char)
+	//bufio.reader
+	reader := bufio.NewReader(os.Stdin)
+	char, size, err := reader.ReadRune()
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	var ch rune
+	n, err := fmt.Scanf("%c", &ch)
 	if err != nil {
 		log.Fatal(err)
 	}
