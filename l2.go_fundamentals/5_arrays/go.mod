@@ -1,3 +1,3 @@
 module camilogo1200.com/learning/go/arrays
 
-go 1.19
+go 1.23

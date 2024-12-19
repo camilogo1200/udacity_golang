@@ -1,3 +1,3 @@
 module camilogo1200.com/learn/go/slices
 
-go 1.19
+go 1.23
