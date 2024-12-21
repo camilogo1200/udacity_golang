@@ -40,7 +40,7 @@ func main() {
 	fmt.Printf("formatted TimeOnly    => %v\n", formattedTimeOnly)
 	formattedRFC1123Z := start.Format(time.RFC1123Z)
 	fmt.Printf("formatted RFC1123Z => %v\n", formattedRFC1123Z)
-	//ISO week ranges freom 1 to 52 or 53
+	//ISO week ranges from 1 to 52 or 53
 	yearISO, weekISO := start.ISOWeek()
 	fmt.Printf("ISO Year => %v, Week => %v\n", yearISO, weekISO)
 

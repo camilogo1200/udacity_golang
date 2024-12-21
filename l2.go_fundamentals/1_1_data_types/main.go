@@ -56,6 +56,8 @@ func main() {
 				elementType = Type
 	*/
 
+	println(nLength)
+
 	var arr [32]byte
 	var arr2 [32]*float64 //array of pointers
 	var matrix [3][5]int
